@@ -44,7 +44,6 @@ climate.on('ready', function () {
       climate.readHumidity(function (err, humid) {
         var temperature = temp.toFixed(0),
           humidity = humid.toFixed(0);
-        console.log('Degrees:', temperature + 'F', 'Humidity:', humidity + '%RH');
         setTimeout(loop, loopTime);
         // send text with temperature
         sendText(temperature, humidity);
