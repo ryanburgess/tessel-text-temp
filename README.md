@@ -28,7 +28,7 @@ Uses Tessel + Twilio to send a text notification of the temperature.
 MIT © [Ryan Burgess](http://ryanburgess.com)
 
 ## Release History
-* 1.2.0: Update documentation.
+* 1.2.0: Add materials needed.
 * 1.1.0: Update documentation.
 * 1.0.0: Initial release.
 
