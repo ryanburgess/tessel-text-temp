@@ -23,11 +23,8 @@ Uses Tessel + Twilio to send a text notification of the temperature.
 1. Run the code on Tessel: `tessel run index.js`
 1. If you want to run the code disconnected from your computer, run `tessel push index.js` to push the code into Tessel's memory, then use an [alternate power source](https://tessel.io/docs/untethered). Just remember to make sure Tessel's connected to the internet, or it won't be able to send the text.
 
-## License
-
-MIT © [Ryan Burgess](http://ryanburgess.com)
-
 ## Release History
+* 1.3.0: Update documentation.
 * 1.2.0: Add materials needed.
 * 1.1.0: Update documentation.
 * 1.0.0: Initial release.
@@ -39,3 +36,7 @@ MIT © [Ryan Burgess](http://ryanburgess.com)
 3. Commit your changes (`git commit -am 'Add some feature'`)
 4. Push to the branch (`git push origin my-new-feature`)
 5. Create new Pull Request
+
+## License
+
+MIT © [Ryan Burgess](http://ryanburgess.com)
