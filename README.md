@@ -1,7 +1,12 @@
 Tessel text temperature
 ================
 
-Uses Tessel + Twilio to send a text notification when the temperature reaches a certain temperature.
+Uses Tessel + Twilio to send a text notification of the temperature.
+
+## Materials
+
+* [Tessel](//tessel.io)
+* [Tessel Climate module](https://tessel.io/modules#module-climate)
 
 ## Software setup
 
