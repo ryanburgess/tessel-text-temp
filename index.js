@@ -12,7 +12,18 @@ var tessel = require('tessel'),
   climate = climatelib.use(tessel.port['D']),
   accountSid = options.account_sid,
   authToken = options.auth_token,
-  client = require('twilio')(accountSid, authToken);
+  client = require('twilio')(accountSid, authToken),
+  loopTime = 86400000;
+
+if(options.send === 'daily'){
+  loopTime = 86400000;// set timeout daily
+}else if(options.send === 'hourly'){
+  loopTime = 3600000;// set timeout ever 30 minutes
+}else if(options.send === 'half-hour'){
+  loopTime = 1800000;// set timeout ever 30 minutes
+}else if(options.send === 'test'){
+  loopTime = 180000;// set timeout ever 30 minutes
+}
 
 function sendText(temp, humid){
   var tempurature = temp;
@@ -34,15 +45,9 @@ climate.on('ready', function () {
         var temperature = temp.toFixed(0),
           humidity = humid.toFixed(0);
         console.log('Degrees:', temperature + 'F', 'Humidity:', humidity + '%RH');
+        setTimeout(loop, loopTime);
         // send text with temperature
         sendText(temperature, humidity);
-        if(options.send === 'daily'){
-          setTimeout(loop, 86400000);// set timeout daily
-        }else if(options.send === 'hourly'){
-          setTimeout(loop, 3600000);// set timeout ever 30 minutes
-        }else if(options.send === 'half-hour'){
-          setTimeout(loop, 1800000);// set timeout ever 30 minutes
-        }
       });
     });
   });
