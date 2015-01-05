@@ -1,0 +1,34 @@
+{
+  "name": "tessel-text-temp",
+  "version": "1.0.0",
+  "description": "Uses Tessel + Twilio to send a text notification when the temperature reaches a certain temperature.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/ryanburgess/tessel-text-temp.git"
+  },
+  "keywords": [
+    "tessel",
+    "text",
+    "temperature",
+    "climate",
+    "sms",
+    "message",
+    "temp",
+    "house"
+  ],
+  "author": "Ryan Burgess <rburgess@evernote.com> (https://github.com/ryanburgess)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ryanburgess/tessel-text-temp/issues"
+  },
+  "homepage": "https://github.com/ryanburgess/tessel-text-temp",
+  "dependencies": {
+    "climate-si7020": "^0.1.1",
+    "tessel": "^0.3.19",
+    "twilio": "^1.10.0"
+  }
+}
